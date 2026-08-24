@@ -78,11 +78,20 @@ jobs:
           restore-keys:
             hugo-
       - name: Build the site
+        # actions/configure-pages reports base_url over http:// until the repo's
+        # Pages settings have "Enforce HTTPS" enabled, and CanonifyURLs makes
+        # every asset URL absolute against it. The result is a page served over
+        # https whose whole stylesheet set is blocked as mixed content, which
+        # looks exactly like the shared module having failed to load. Force the
+        # scheme so the deploy can't depend on that checkbox.
         run: |
+          BASE="${{ steps.pages.outputs.base_url }}/"
+          BASE="${BASE/#http:\/\//https://}"
+          echo "Building with baseURL $BASE"
           hugo build \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            --baseURL "$BASE" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
       - name: Cache save
         id: cache-save
