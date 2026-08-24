@@ -1,0 +1,74 @@
+// Nordic Adventures' palette.
+//
+// Every site built on the shared Synergy layer supplies this file; the module
+// imports it by name and ships no palette of its own. The slot names are fixed
+// by the module's partials, so keep the full set even where a value isn't
+// obviously "gold" or "blue" any more.
+//
+// The colors are sampled from the list's own night sky: an orange aurora over
+// deep indigo, with a violet nebula behind it. Measured from the tundra-ruins
+// capture, the sky sorts into four families:
+//
+//   orange aurora   #e6874c -> #fd9e5c -> #ffad67
+//   red aurora      #854f49 -> #d55453 -> #fe7d5e
+//   indigo sky      #1a1a34 -> #20203e -> #272748
+//   nebula violet   #30223c -> #44324d
+//
+// So: indigo carries the surfaces, the aurora's orange carries links and
+// accents, and the deeper red is held back for alerts, which need to read as
+// hotter than the orange that's doing everyday work.
+
+:root {
+  // Links, the aurora at its brightest. 8.9:1 on the page color.
+  --VARIABLE-LINK-color: #ffad67;
+  --VARIABLE-LINK-HOVER-color: #ffcb9e;
+
+  // Primary accent: button pills, file names, controller glyphs, checkmarks.
+  --mgo-btn-inline: #b9662f99;
+  --mgo-gold-dark: #b9662f;
+  --mgo-gold: #fd9e5c;
+  --mgo-gold-trans: #ffad6733;
+
+  // The cool half of the sky, for the furniture that shouldn't compete with the
+  // aurora.
+  --mgo-red: #c2452c;
+  --mgo-blue: #272748;
+  --mgo-blue2: #4a4a7d;
+
+  // Surfaces. The page tile is a translucent overlay, so --mgo-bg is what
+  // actually sets the page color: the sky's mid indigo, a shade deeper so body
+  // text has room to sit on it.
+  --mgo-bg: #1c1c36;
+  --mgo-logo-bg1: #242444;
+  --mgo-logo-bg2: #1e1e3a;
+
+  // Asides. The alert takes the sky's deep red rather than its orange, so a
+  // warning still reads as hotter than the links and pills around it. "By the
+  // way" runs indigo, and note sits in the nebula's violet.
+  //
+  // Only bg1 and bg2 are visible: see the stop-order note in _asides.scss.
+  --mgo-alert-title: rgba(58, 14, 8, 0.85);
+  --mgo-alert-bg1: #6e1d12;
+  --mgo-alert-bg2: #fe7d5e66;
+  --mgo-alert-bg3: #c2452c;
+  --mgo-gradient1: #7d3a1c;
+  --mgo-gradient2: #5e2414;
+  --mgo-gradient3: #f0903c;
+  --mgo-btw1: #1e1e3a66;
+  --mgo-btw2: #4a4a7dcc;
+  --mgo-note1: #30223c33;
+  --mgo-note2: #6e5a8266;
+
+  // Chrome. These come from the module's _variables.scss, which the manifest
+  // imports *before* this file, so a site can lift them without a module change.
+  // Deeper than the content area here, the far end of the sky gradient, so the
+  // aurora-lit content reads as the lit part of the page.
+  --INTERNAL-MENU-SECTIONS-BG-color: #15152b;
+  --INTERNAL-MENU-HEADER-BG-color: #15152b;
+  --INTERNAL-TOPBAR-BG-color: #15152b;
+  --INTERNAL-MENU-HEADER-BORDER-color: #15152b;
+}
+
+#R-topbar > .topbar-wrapper {
+  --VARIABLE-LINK-HOVER-color: #ffcb9e;
+}
