@@ -1,7 +1,10 @@
 +++
-title = 'Nordic Adventures 2.0'
-weight = 10
+title = 'Nordic Adventures 2.00.00'
+weight = 20
+hidden = true
 +++
+
+This is the previous release; the current list lives at [Nordic Adventures 2.02](/load-order/nordic-2-02/).
 
 The complete mod list for **Nordic Adventures 2.00.00**, straight from Mod Organizer 2. The section headers mirror the grouping you see in MO2's left pane, and they start closed, so you get an outline of the list before you get all seventeen hundred mods in it. Open the ones you're curious about, or hit {{< btn-inline >}}Expand all{{< /btn-inline >}}.
 
