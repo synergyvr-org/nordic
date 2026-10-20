@@ -13,6 +13,8 @@ These docs are brand new, and most of them aren't written yet. Nothing here is f
 
 These pages will cover what you need to install the list, set it up, and understand what it changes about Skyrim VR.
 
-## Where to start
+If you'd like to know more, the [FAQ](/reference/faq) is a good place to start.
+
+## How to play
 
 The list is on Nexus now, so the fastest route in is {{< nexus 149666 >}}the Nexus page{{< /nexus >}} and the Wabbajack installer. Once you're in the game, the pages here will fill in the parts a Nexus description can't: the controls, the settings worth changing, and what to do when something goes wrong.
